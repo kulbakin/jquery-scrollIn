@@ -1,0 +1,26 @@
+{
+  "name": "jquery-scrollIn",
+  "version": "1.0.0",
+  "keywords": [
+    "scroll",
+    "scrollIntoView",
+    "jquery"
+  ],
+  "dependencies": {
+    "jquery": ">=1.7"
+  },
+  "authors": [
+    "Pavel Kulbakin <p.kulbakin@gmail.com>"
+  ],
+  "main": "jquery.scrollIn.min.js",
+  "homepage": "https://github.com/kulbakin/jquery-scrollIn",
+  "description": "jQuery equivalent of Element.scrollIntoView",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

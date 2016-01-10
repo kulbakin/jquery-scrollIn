@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>jquery.scrollTo demo</title>
+
+    <style>
+    body {
+        font-family: Verdana, sans-serif;
+        font-size: 16px;
+        line-height: 1.4;
+    }
+    p {
+        margin: 1em 0;
+    }
+    div#ipsum-v {
+        max-height: 15em;
+        overflow-y: auto;
+        border: 1px solid #ccc;
+        padding: 0 1em;
+    }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.scrollIn.min.js"></script>
+    <script type="text/javascript">
+    (function($){$(function() {
+        $('a[href="#first"]').on('click', function (e) {
+            e.preventDefault();
+            $('#ipsum-v p:first').scrollIn();
+        });
+        $('a[href="#second"]').on('click', function (e) {
+            e.preventDefault();
+            $('#ipsum-v p:nth-child(2)').scrollIn();
+        });
+        $('a[href="#last"]').on('click', function (e) {
+            e.preventDefault();
+            $('#ipsum-v p:last').scrollIn(false);
+        });
+    });})(jQuery);
+    </script>
+</head>
+<body>
+<ul>
+    <li><a href="#first">Scroll to the first paragraph</a></li>
+    <li><a href="#second">Scroll to the second paragraph</a></li>
+    <li><a href="#last">Scroll to the last paragraph</a></li>
+</ul>
+<div id="ipsum-v">
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis lacus rhoncus mi dapibus congue eu ut est. Vestibulum viverra scelerisque porta. Sed condimentum luctus magna, eget placerat mauris. Nullam a maximus velit. Quisque cursus scelerisque odio, quis sodales dolor fringilla in. Mauris consequat est et hendrerit pharetra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam in ligula pharetra orci ornare blandit interdum sit amet nisi. Etiam porttitor ac quam nec malesuada. Cras ut tortor risus. Sed eu ultricies dui. Suspendisse sagittis nunc vel felis venenatis tristique. Maecenas mauris lectus, fermentum ut mollis at, accumsan vel metus.
+</p>
+<p>
+Cras dictum sit amet dolor ut sagittis. Vivamus non quam mi. Pellentesque cursus eros eu porttitor maximus. Suspendisse ultrices mauris vel molestie ullamcorper. Aliquam ullamcorper justo vitae enim facilisis, id tristique enim ultrices. Aenean gravida velit eu consectetur accumsan. Sed varius in risus non pulvinar. Sed faucibus arcu ac turpis dictum lacinia. Maecenas feugiat sed sem sed auctor. Morbi ut nisl varius, fermentum eros ut, facilisis elit.
+</p>
+<p>
+Sed pretium ultricies est, ullamcorper consectetur tellus dapibus et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque gravida odio tortor, nec tincidunt elit varius sit amet. Phasellus interdum elementum malesuada. Curabitur vel tellus purus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed blandit rhoncus urna at tristique. Integer eget leo posuere, euismod ex a, faucibus est. Quisque ex lorem, ornare ac quam ut, tempus luctus nunc. Nullam dapibus egestas sapien, sed volutpat tortor sagittis id. Praesent magna dolor, posuere sed accumsan ac, volutpat in neque. Nunc nibh ex, placerat non suscipit nec, tincidunt sit amet leo. Nunc varius metus et metus facilisis, elementum gravida purus facilisis. Phasellus vulputate fermentum nisi, quis semper quam.
+</p>
+<p>
+Vivamus auctor ex ac ullamcorper convallis. Aliquam erat volutpat. Nam eu lorem finibus, blandit lorem et, suscipit sapien. Sed nec odio dui. Vestibulum ante enim, bibendum at ligula id, mattis eleifend erat. Curabitur nulla metus, elementum at lobortis non, convallis quis tellus. Phasellus vulputate suscipit odio nec imperdiet. Maecenas non nisl ullamcorper, cursus augue eu, rutrum sapien. Sed vestibulum odio sed consectetur hendrerit. Nam imperdiet sed tellus non bibendum. Nunc eget risus dolor. Vestibulum fringilla id neque vitae mattis. Sed varius turpis eu odio congue tempor. In in libero nibh. In tristique auctor metus at dictum.
+</p>
+<p>
+Donec libero tortor, fermentum ac nulla at, efficitur ultrices nulla. Ut eget consectetur sem, eu lacinia massa. Sed tellus diam, congue ac ipsum quis, fermentum volutpat mauris. In nisl eros, venenatis vitae rutrum at, interdum vitae ex. In in gravida turpis, id tincidunt metus. Curabitur augue augue, porta vel pellentesque a, tincidunt id nibh. Suspendisse pellentesque felis nec felis sollicitudin auctor. Nunc porta vehicula enim, sit amet posuere sapien volutpat at. Maecenas mattis a felis quis vulputate. Aenean finibus et ligula non pharetra. Mauris pretium nibh a ex efficitur tincidunt. Cras faucibus in erat nec porta. Sed quis lacus lectus.
+</p>
+</div>
+
+</body>
+</html>
