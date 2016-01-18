@@ -2,7 +2,7 @@
  * jquery.scrollIn.js
  *
  * @author Pavel Kulbakin <p.kulbakin@gmail.com>
- * @version 1.0.0
+ * @version 1.0.1
  * @license MIT
  *
  * jQuery equivalent of Element.scrollIntoView()
@@ -34,7 +34,7 @@
      * Default options for the method
      */
     var defaults = {
-        behavior: 'auto',   // "auto" (100) | "instant" (0) | "smooth" (200) | animation duration in milliseconds
+        behavior: 'auto',   // "auto" (200) | "instant" (0) | "smooth" (400) | animation duration in milliseconds
         block: 'start',     // "start" | "end" | "middle"
         margin: 0,          // number of pixels to adjust calculated position by
         lazy: false         // false (triggered always) | true (triggered only if not within visible area already)
@@ -55,11 +55,15 @@
         // apply default options
         options = $.extend({}, defaults, options);
         // cast 'behavior' into animation duration
-        options.behavior = {auto: 100, smooth: 200}[options.behavior] || parseInt(options.behavior) || 0;
+        options.behavior = {auto: 200, smooth: 400}[options.behavior] || parseInt(options.behavior) || 0;
 
         var $to = this.first();
         var $re = $to.parent().closest(':scrollable');
-        var animation = {queue: 'scrollIntoView', easing: 'easein'};
+        var animation = {options: {
+            easing: 'linear',
+            duration: options.behavior,
+            queue: 'scrollIn'
+        }};
 
         // proceed only if there is scrollable container
         if ($re.length) {
@@ -95,7 +99,7 @@
             });
 
             if (undefined !== animation.scrollTop || undefined !== animation.scrollLeft) {
-                $re.stop(animation.queue).animate(animation, options.behavior).dequeue(animation.queue);
+                $re.stop(animation.queue).animate(animation).dequeue(animation.queue);
             }
         }
 
