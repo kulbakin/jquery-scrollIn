@@ -20,7 +20,7 @@ $(selector).scrollIn({block: "end"});
 
 | Option   | Accepted Values | Default | Description |
 | -------- | ----------------| ------- | ----------- |
-| behavior | "auto", "instant", "smooth" or number milliseconds | "auto" | animation style aka duration (*instant* = 0, *auto* = 100, *smooth* = 200) |
+| behavior | "auto", "instant", "smooth" or number milliseconds | "auto" | animation style aka duration (*instant* = 0, *auto* = 200, *smooth* = 400) |
 | block    | "start", "end", "middle" | "start" | alignment of target block relative to scrollable container
 | margin   | number of pixels | 0 | value to adjust target scroll position, useful to account for fixed elements like header or footer |
 | lazy     | boolean | false | flag to to indicate whether to avoid scrolling if element is already within visible scrollable area |
