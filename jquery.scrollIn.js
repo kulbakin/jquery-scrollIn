@@ -55,7 +55,7 @@
         // apply default options
         options = $.extend({}, defaults, options);
         // cast 'behavior' into animation duration
-        options.behavior = {auto: 200, smooth: 400}[options.behavior] || parseInt(options.behavior) || 0;
+        options.behavior = {auto: 200, smooth: 400}[options.behavior] || parseInt(options.behavior) || 1;
 
         var $to = this.first();
         var $re = $to.parent().closest(':scrollable');
